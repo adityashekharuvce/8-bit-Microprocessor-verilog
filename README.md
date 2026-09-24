@@ -7,14 +7,49 @@ at the Register Transfer Level (RTL).
 
 ## Architecture
 
-The processor consists of:
+## Architecture
 
-- 8-bit ALU
-- Register File
-- Program Counter
-- Instruction Decoder
-- Control Unit
-- Memory Interface
+The 8-bit microprocessor consists of the following major blocks:
+
+```text
+              ┌─────────────────┐
+              │ Program Counter │
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │ Instruction     │
+              │ Memory / Fetch  │
+              └────────┬────────┘
+                       │
+                       ▼
+              ┌─────────────────┐
+              │ Control Unit /  │
+              │ Instruction     │
+              │ Decoder         │
+              └────────┬────────┘
+                       │
+             ┌─────────┴─────────┐
+             ▼                   ▼
+      ┌─────────────┐     ┌─────────────┐
+      │ Register    │────►│     ALU     │
+      │ File        │     └──────┬──────┘
+      └─────────────┘            │
+                                 ▼
+                          ┌─────────────┐
+                          │   Result    │
+                          └─────────────┘
+```
+
+### Main Components
+
+* **Program Counter (PC):** Holds the address of the current instruction.
+* **Instruction Decoder:** Decodes the fetched instruction.
+* **Control Unit:** Generates control signals for datapath operation.
+* **Register File:** Stores processor registers.
+* **ALU:** Performs arithmetic and logical operations.
+* **Top Module:** Integrates the complete processor.
+* **Testbench:** Verifies processor operation through simulation.
 
 ## Design
 
