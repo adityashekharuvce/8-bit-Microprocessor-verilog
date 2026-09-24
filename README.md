@@ -1,6 +1,6 @@
 # 8-bit Microprocessor — Verilog RTL Design
 
-## Overview
+## Overview 
 
 An 8-bit microprocessor designed and implemented using Verilog HDL
 at the Register Transfer Level (RTL).
